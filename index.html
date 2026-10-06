@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Peter Karkus</title>
-  <meta name="description" content="Peter Karkus — Research Scientist at NVIDIA Research. Machine learning, robotics, autonomous vehicles, embodied AI.">
+  <meta name="description" content="Peter Karkus — Senior Research Scientist at NVIDIA Research. Autonomous driving, robotics, vision-language-action models, closed-loop simulation.">
   <meta property="og:title" content="Peter Karkus">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://peterkarkus.com/">
@@ -67,6 +67,8 @@
     .paper a { color: #000; }
     .paper .eq { font-style: italic; }
 
+    .pubs-all { margin-top: 64px; }
+
     footer { text-align: center; margin: 90px auto 0; padding: 0 0 60px; }
     footer b { font-weight: 700; }
     footer a { text-decoration: none; }
@@ -79,6 +81,7 @@
       .intro p, .prev { font-size: 15px; }
       .about { margin-top: 36px; }
       .pubs { margin-top: 40px; }
+      .pubs-all { margin-top: 36px; }
       h2 { font-size: 22px; }
       .paper { font-size: 15px; margin-bottom: 14px; }
       footer { margin-top: 60px; }
@@ -90,19 +93,17 @@
 
     <section class="intro">
       <div class="photo">
-        <!-- Falls back to the old Tilda-hosted image until profile.jpg is added to the repo -->
-        <img src="profile.jpg" alt="Peter Karkus"
-             onerror="this.onerror=null;this.src='https://static.tildacdn.info/tild6431-3963-4338-b164-376230316362/-/resize/800x/IMG_8808_Online.JPG';">
+        <img src="profile.jpg" alt="Peter Karkus">
       </div>
         <h1>Hi, I'm Peter Karkus.</h1>
-        <p>Research Scientist @ <a href="https://research.nvidia.com/"><b>NVIDIA Research</b></a></p>
+        <p>Senior Research Scientist @ <a href="https://research.nvidia.com/"><b>NVIDIA Research</b></a></p>
         <p>
           pkarkus@nvidia.com | <a href="https://scholar.google.com/citations?user=cjUid0YAAAAJ">Google Scholar</a> | <a href="https://www.linkedin.com/in/peter-karkus-b301b223/">LinkedIn</a> | <a href="https://github.com/karkuspeter">GitHub</a>
         </p>
         <p class="prev-title">Previously:</p>
         <ul class="prev">
           <li>PhD Candidate, Research Assistant @ <a href="http://www.nus.edu.sg/"><b>National University of Singapore</b></a></li>
-          <li>Research Intern @ <a href="https://deepmind.google/"><b>DeepMind</b></a>,</li>
+          <li>Research Intern @ <a href="https://deepmind.google/"><b>DeepMind</b></a></li>
           <li>Research Intern @ <a href="https://research.google/teams/brain/"><b>Google Brain</b></a></li>
           <li>Visiting Researcher @ <a href="https://www.csail.mit.edu/"><b>MIT CSAIL</b></a></li>
           <li>Fulbright Visiting Researcher @ <a href="https://www.ri.cmu.edu/"><b>CMU Robotics Institute</b></a></li>
@@ -111,8 +112,7 @@
     </section>
 
     <section class="about">
-      <p>I am a researcher in machine learning and robotics with a long-term vision of building human-level robot intelligence. My research focuses on autonomous vehicles and embodied AI that combines learning with structure and reasoning. My recent works are on neural networks that encode classic robot algorithms in order to learn partially observable planning, visual navigation, localization, and mapping tasks.</p>
-      <p>Interests: reinforcement learning, neural networks, embodied AI, autonomous vehicles, planning, robot control, visual navigation.</p>
+      <p>My research interests include autonomous driving and robotics, with a focus on end-to-end vision-language-action and world-action models, closed-loop simulation, and RL post-training. At NVIDIA, I work on <a href="https://www.nvidia.com/en-us/solutions/autonomous-vehicles/alpamayo/">Alpamayo</a>, an open platform for reasoning-based vehicle autonomy, focusing on closed-loop evaluation and training of driving models. I am a core contributor to <a href="https://arxiv.org/abs/2511.00088">Alpamayo models</a>, <a href="https://github.com/NVlabs/alpasim">AlpaSim</a>, and <a href="https://github.com/NVlabs/alpagym">AlpaGym</a>. My earlier work introduced differentiable algorithm networks for robot planning, navigation, mapping, and localization.</p>
     </section>
 
     <section class="pubs">
@@ -120,24 +120,209 @@
       <ul class="papers">
 
         <li class="paper">
+          <span class="title">Beyond Behavior Cloning in Autonomous Driving: A Survey of Closed-Loop Training Techniques</span>
+          <span class="res">[<a href="https://doi.org/10.36227/techrxiv.176591565.57674132/v1">pdf</a>]</span>
+          <span class="authors">P. Karkus*, M. Igl*, Y. Chen, K. Chitta, J. Packer, B. Douillard, R. Tian, A. Naumann, G. Garcia-Cobo, S. Tan, A. Degirmenci, A. Popov, N. Smolyanskiy, U. Muller, B. Ivanovic, M. Pavone. <span class="eq">*equal contribution</span></span>
+          <span class="venue">In submission, 2026</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Closed-Loop Supervised Fine-Tuning of Tokenized Traffic Models</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2412.05334">pdf</a>]</span>
+          <span class="authors">Z. Zhang, P. Karkus, M. Igl, W. Ding, Y. Chen, B. Ivanovic, M. Pavone.</span>
+          <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2025</span>
+          <span class="award">Oral presentation (top 3.3%).</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2511.00088">pdf</a>]</span>
+          <span class="authors">NVIDIA: Y. Wang, W. Luo, J. Bai, Y. Cao, T. Che, K. Chen, Y. Chen, J. Diamond, Y. Ding, W. Ding, L. Feng, G. Heinrich, J. Huang, P. Karkus, B. Li, et al.</span>
+          <span class="venue">arXiv preprint arXiv:2511.00088, 2025</span>
+        </li>
+
+        <li class="paper">
           <span class="title">DiffStack: A Differentiable and Modular Control Stack for Autonomous Vehicles</span>
-          <span class="res">[<a href="https://arxiv.org/abs/2212.06437">pdf</a>] [<a href="https://sites.google.com/view/diffstack">website</a>] [<a href="https://github.com/NVlabs/diffstack">code</a>]</span>
+          <span class="res">[<a href="https://proceedings.mlr.press/v205/karkus23a/karkus23a.pdf">pdf</a>] [<a href="https://sites.google.com/view/diffstack">website</a>]</span>
           <span class="authors">P. Karkus, B. Ivanovic, S. Mannor, M. Pavone.</span>
           <span class="venue">Conference on Robot Learning (CoRL), 2022</span>
         </li>
 
         <li class="paper">
-          <span class="title">Differentiable SLAM-net: Learning Particle SLAM for Visual Navigation</span>
-          <span class="res">[<a href="https://arxiv.org/pdf/2105.07593.pdf">pdf</a>] [<a href="https://sites.google.com/view/slamnet">website</a>] [<a href="https://www.youtube.com/watch?v=ugEKzydiXPY">talk</a>]</span>
-          <span class="authors">P. Karkus, S. Cai, D. Hsu.</span>
-          <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2021</span>
+          <span class="title">Differentiable Algorithm Networks for Composable Robot Learning</span>
+          <span class="res">[<a href="http://rss2019.informatik.uni-freiburg.de/papers/0128_FI.pdf">pdf</a>] [<a href="https://youtu.be/A91AIgBuxxE?t=558">talk</a>]</span>
+          <span class="authors">P. Karkus, X. Ma, D. Hsu, L.P. Kaelbling, W.S. Lee, T. Lozano-Pérez.</span>
+          <span class="venue">Robotics: Science and Systems (RSS), 2019</span>
+          <span class="award">Best paper nomination (top 5 papers).</span>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="pubs pubs-all">
+      <h2>All publications</h2>
+      <ul class="papers">
+
+        <li class="paper">
+          <span class="title">Monkey See, Can Monkey Do? A Benchmark for Evaluating Robot Skill Learning by Observation</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2609.08209">pdf</a>]</span>
+          <span class="authors">W. Gu, A. Gupta, A. Sah, R. Varghese, L.S. Vanam, P. Adireddi, P. Karkus, N. Gopalan.</span>
+          <span class="venue">Conference on Robot Learning (CoRL), 2026</span>
         </li>
 
         <li class="paper">
-          <span class="title">Beyond Tabula-Rasa: a Modular Reinforcement Learning Approach for Physically Embedded 3D Sokoban</span>
-          <span class="res">[<a href="https://arxiv.org/pdf/2010.01298.pdf">pdf</a>] [<a href="https://sites.google.com/view/modular-rl/">website</a>]</span>
-          <span class="authors">P. Karkus, M. Mirza, A. Guez, A. Jaegle, T. Lillicrap, L. Buesing, N. Heess, T. Weber.</span>
-          <span class="venue">arXiv preprint arXiv:2010.01298, 2020</span>
+          <span class="title">Learning Multiple Initial Solutions to Optimization Problems</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2411.02158">pdf</a>]</span>
+          <span class="authors">E. Sharony, H. Yang, T. Che, M. Pavone, S. Mannor, P. Karkus.</span>
+          <span class="venue">International Conference on Robotics and Automation (ICRA), 2026</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">RoaD: Rollouts as Demonstrations for Closed-Loop Supervised Fine-Tuning of Autonomous Driving Policies</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2512.01993">pdf</a>]</span>
+          <span class="authors">G. Garcia-Cobo*, M. Igl*, P. Karkus*, Z. Zhang*, M. Watson, Y. Chen, B. Ivanovic, M. Pavone. <span class="eq">*equal contribution</span></span>
+          <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR) Findings, 2026</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Beyond Behavior Cloning in Autonomous Driving: A Survey of Closed-Loop Training Techniques</span>
+          <span class="res">[<a href="https://doi.org/10.36227/techrxiv.176591565.57674132/v1">pdf</a>]</span>
+          <span class="authors">P. Karkus*, M. Igl*, Y. Chen, K. Chitta, J. Packer, B. Douillard, R. Tian, A. Naumann, G. Garcia-Cobo, S. Tan, A. Degirmenci, A. Popov, N. Smolyanskiy, U. Muller, B. Ivanovic, M. Pavone. <span class="eq">*equal contribution</span></span>
+          <span class="venue">In submission, 2026</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Planning-Aligned Token Compression for Long-Context Autonomous Driving</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2606.07464">pdf</a>]</span>
+          <span class="authors">Z. Liang, Y. Chen, Y. You, P. Karkus, W. Ding, B. Li, A. Popov, Y. Wang, M. Igl, Y. Li, D. Xu, N. Smolyanskiy, B. Ivanovic, P. Luo, M. Pavone.</span>
+          <span class="venue">IEEE Robotics and Automation Letters (RA-L) 11(10), 2026</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Trends in Motion Prediction Toward Deployable and Generalizable Autonomy: A Revisit and Perspectives</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2505.09074">pdf</a>]</span>
+          <span class="authors">L. Wang, M.-A. Lavoie, S. Papais, B. Nisar, Y. Chen, W. Ding, B. Ivanovic, H. Shao, A. Abuduweili, E. Cook, Y. Zhou, P. Karkus, J. Li, C. Liu, M. Pavone, S.L. Waslander.</span>
+          <span class="venue">Foundations and Trends in Robotics 13(1–2), 2026</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">OPTED: On-Policy Fine-Tuning for End-to-End Driving Using a Render-Free Teacher</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2609.20756">pdf</a>]</span>
+          <span class="authors">D. Da Col, M. Igl, P. Karkus, K. Chitta, B. Ivanovic, M. Pavone, K. Schindler, C. Sakaridis.</span>
+          <span class="venue">arXiv preprint arXiv:2609.20756, 2026</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Vision-Language-Action Autonomous Driving Agent with Language-Based Memory</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2609.38641">pdf</a>]</span>
+          <span class="authors">K. Yan, X. Chen, Y. Cao, A. Naumann, P. Karkus, Y. Wang, J. Packer, A. Schwing, Y. Wang, B. Ivanovic, W. Luo, M. Pavone.</span>
+          <span class="venue">arXiv preprint arXiv:2609.38641, 2026</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">CtrlWAM: Controllable World Action Models with Aligned Intent and Foresight</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2610.00859">pdf</a>]</span>
+          <span class="authors">C. Peng, W. Ding, R. Tian, Z. Zhou, J. Packer, M. Igl, P. Karkus, Y. Wang, M. Tomizuka, B. Ivanovic, M. Pavone, Y. Chen.</span>
+          <span class="venue">arXiv preprint arXiv:2610.00859, 2026</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Closed-Loop Supervised Fine-Tuning of Tokenized Traffic Models</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2412.05334">pdf</a>]</span>
+          <span class="authors">Z. Zhang, P. Karkus, M. Igl, W. Ding, Y. Chen, B. Ivanovic, M. Pavone.</span>
+          <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2025</span>
+          <span class="award">Oral presentation (top 3.3%).</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">STORM: Spatio-Temporal Reconstruction Model for Large-Scale Outdoor Scenes</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2501.00602">pdf</a>]</span>
+          <span class="authors">J. Yang, J. Huang, B. Ivanovic, Y. Chen, Y. Wang, B. Li, Y. You, A. Sharma, M. Igl, P. Karkus, D. Xu, Y. Wang, M. Pavone.</span>
+          <span class="venue">International Conference on Learning Representations (ICLR), 2025</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">LoRD: Adapting Differentiable Driving Policies to Distribution Shifts</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2410.09681">pdf</a>]</span>
+          <span class="authors">C. Diehl, P. Karkus, S. Veer, M. Pavone, T. Bertram.</span>
+          <span class="venue">International Conference on Robotics and Automation (ICRA), 2025</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2511.00088">pdf</a>]</span>
+          <span class="authors">NVIDIA: Y. Wang, W. Luo, J. Bai, Y. Cao, T. Che, K. Chen, Y. Chen, J. Diamond, Y. Ding, W. Ding, L. Feng, G. Heinrich, J. Huang, P. Karkus, B. Li, et al.</span>
+          <span class="venue">arXiv preprint arXiv:2511.00088, 2025</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">DistillNeRF: Perceiving 3D Scenes from Single-Glance Images by Distilling Neural Fields and Foundation Model Features</span>
+          <span class="res">[<a href="https://arxiv.org/pdf/2406.12095">pdf</a>] [<a href="https://distillnerf.github.io/">website</a>]</span>
+          <span class="authors">L. Wang, S.W. Kim, J. Yang, C. Yu, B. Ivanovic, S.L. Waslander, Y. Wang, S. Fidler, M. Pavone, P. Karkus.</span>
+          <span class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2024</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">DTPP: Differentiable Joint Conditional Prediction and Cost Evaluation for Tree Policy Planning in Autonomous Driving</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2310.05885">pdf</a>] [<a href="https://github.com/MCZhi/DTPP">code</a>]</span>
+          <span class="authors">Z. Huang, P. Karkus, B. Ivanovic, Y. Chen, M. Pavone, C. Lv.</span>
+          <span class="venue">International Conference on Robotics and Automation (ICRA), 2024</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Partial-View Object View Synthesis via Filtering Inversion</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2304.00673">pdf</a>]</span>
+          <span class="authors">F.-Y. Sun, J. Tremblay, V. Blukis, K. Lin, D. Xu, B. Ivanovic, P. Karkus, S. Birchfield, D. Fox, R. Zhang, Y. Li, J. Wu, M. Pavone, N. Haber.</span>
+          <span class="venue">International Conference on 3D Vision (3DV), 2024</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">System-Level Analysis of Module Uncertainty Quantification in the Autonomy Pipeline</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2410.12019">pdf</a>]</span>
+          <span class="authors">S. Deglurkar, H. Shen, A. Muthali, M. Pavone, D.D. Margineantu, P. Karkus, B. Ivanovic, C.J. Tomlin.</span>
+          <span class="venue">IEEE Conference on Decision and Control (CDC), 2024</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Interactive Joint Planning for Autonomous Vehicles</span>
+          <span class="res">[<a href="https://arxiv.org/pdf/2310.18301">pdf</a>]</span>
+          <span class="authors">Y. Chen, S. Veer, P. Karkus, M. Pavone.</span>
+          <span class="venue">IEEE Robotics and Automation Letters (RA-L) 9(2), 2024</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Tree-Structured Policy Planning with Learned Behavior Models</span>
+          <span class="res">[<a href="https://arxiv.org/pdf/2301.11902">pdf</a>]</span>
+          <span class="authors">Y. Chen, P. Karkus, B. Ivanovic, X. Weng, M. Pavone.</span>
+          <span class="venue">International Conference on Robotics and Automation (ICRA), 2023</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Planning with Occluded Traffic Agents Using Bi-Level Variational Occlusion Models</span>
+          <span class="res">[<a href="https://arxiv.org/pdf/2210.14584">pdf</a>]</span>
+          <span class="authors">F. Christianos, P. Karkus, B. Ivanovic, S.V. Albrecht, M. Pavone.</span>
+          <span class="venue">International Conference on Robotics and Automation (ICRA), 2023</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Receding Horizon Planning with Rule Hierarchies for Autonomous Vehicles</span>
+          <span class="res">[<a href="https://arxiv.org/abs/2212.03323">pdf</a>]</span>
+          <span class="authors">S. Veer, K. Leung, R.K. Cosner, Y. Chen, P. Karkus, M. Pavone.</span>
+          <span class="venue">International Conference on Robotics and Automation (ICRA), 2023</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">DiffStack: A Differentiable and Modular Control Stack for Autonomous Vehicles</span>
+          <span class="res">[<a href="https://proceedings.mlr.press/v205/karkus23a/karkus23a.pdf">pdf</a>] [<a href="https://sites.google.com/view/diffstack">website</a>]</span>
+          <span class="authors">P. Karkus, B. Ivanovic, S. Mannor, M. Pavone.</span>
+          <span class="venue">Conference on Robot Learning (CoRL), 2022</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Differentiable SLAM-Net: Learning Particle SLAM for Visual Navigation</span>
+          <span class="res">[<a href="https://drive.google.com/file/d/1jsgkXmUHU72uzWSjoMWIRxeB9uaBGQvH/view?usp=sharing">pdf</a>] [<a href="https://sites.google.com/view/slamnet">website</a>]</span>
+          <span class="authors">P. Karkus, S. Cai, D. Hsu.</span>
+          <span class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2021</span>
         </li>
 
         <li class="paper">
@@ -150,7 +335,7 @@
         <li class="paper">
           <span class="title">Discriminative Particle Filter Reinforcement Learning for Complex Partial Observations</span>
           <span class="res">[<a href="https://openreview.net/pdf?id=HJl8_eHYvS">pdf</a>] [<a href="https://github.com/Yusufma03/DPFRL">code</a>]</span>
-          <span class="authors">X. Ma, P. Karkus, N. Ye, D. Hsu, W.S. Lee.</span>
+          <span class="authors">X. Ma, P. Karkus, D. Hsu, W.S. Lee, N. Ye.</span>
           <span class="venue">International Conference on Learning Representations (ICLR), 2020</span>
         </li>
 
@@ -162,11 +347,25 @@
         </li>
 
         <li class="paper">
+          <span class="title">Beyond Tabula-Rasa: A Modular Reinforcement Learning Approach for Physically Embedded 3D Sokoban</span>
+          <span class="res">[<a href="https://arxiv.org/pdf/2010.01298.pdf">pdf</a>] [<a href="https://sites.google.com/view/modular-rl/">website</a>]</span>
+          <span class="authors">P. Karkus, M. Mirza, A. Guez, A. Jaegle, T. Lillicrap, L. Buesing, N. Heess, T. Weber.</span>
+          <span class="venue">arXiv preprint arXiv:2010.01298, 2020</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Physically Embedded Planning Problems: New Challenges for Reinforcement Learning</span>
+          <span class="res">[<a href="https://arxiv.org/pdf/2009.05524.pdf">pdf</a>] [<a href="https://github.com/deepmind/deepmind-research/tree/master/physics_planning_games">code</a>]</span>
+          <span class="authors">M. Mirza, A. Jaegle, J.J. Hunt, A. Guez, S. Tunyasuvunakool, A. Muldal, T. Weber, P. Karkus, S. Racanière, L. Buesing, T. Lillicrap, N. Heess.</span>
+          <span class="venue">arXiv preprint arXiv:2009.05524, 2020</span>
+        </li>
+
+        <li class="paper">
           <span class="title">Differentiable Algorithm Networks for Composable Robot Learning</span>
           <span class="res">[<a href="http://rss2019.informatik.uni-freiburg.de/papers/0128_FI.pdf">pdf</a>] [<a href="https://youtu.be/A91AIgBuxxE?t=558">talk</a>]</span>
-          <span class="authors">P. Karkus, X. Ma, D. Hsu, L.P. Kaelbling, W.S. Lee, T. Lozano-Perez.</span>
+          <span class="authors">P. Karkus, X. Ma, D. Hsu, L.P. Kaelbling, W.S. Lee, T. Lozano-Pérez.</span>
           <span class="venue">Robotics: Science and Systems (RSS), 2019</span>
-          <span class="award">Best Student Paper Nomination. Best System Paper Nomination.</span>
+          <span class="award">Best paper nomination (top 5 papers).</span>
         </li>
 
         <li class="paper">
@@ -191,6 +390,13 @@
         </li>
 
         <li class="paper">
+          <span class="title">Generation of Entangled Photons Using an Arrayed Waveguide Grating</span>
+          <span class="res">[<a href="http://iopscience.iop.org/article/10.1088/2040-8986/aa912a/pdf">pdf</a>]</span>
+          <span class="authors">N. Matsuda, H. Nishi, P. Karkus, T. Tsuchizawa, K. Yamada, W.J. Munro, K. Shimizu, H. Takesue.</span>
+          <span class="venue">Journal of Optics 19(12), 2017</span>
+        </li>
+
+        <li class="paper">
           <span class="title">Recursive Constraint Manifold Subsearch for Multirobot Path Planning with Cooperative Tasks</span>
           <span class="res">[<a href="https://www.aaai.org/ocs/index.php/SOCS/SOCS16/paper/viewFile/13949/13234">pdf</a>]</span>
           <span class="authors">P. Karkus, G. Wagner, H. Choset.</span>
@@ -198,10 +404,10 @@
         </li>
 
         <li class="paper">
-          <span class="title">Generation of entangled photons using an arrayed waveguide grating</span>
-          <span class="res">[<a href="http://iopscience.iop.org/article/10.1088/2040-8986/aa912a/pdf">pdf</a>]</span>
-          <span class="authors">N. Matsuda, H. Nishi, P. Karkus, T. Tsuchizawa, K. Yamada, W.J. Munro, K. Shimizu, H. Takesue.</span>
-          <span class="venue">Journal of Optics 19(12), 2017</span>
+          <span class="title">On-Chip Generation and Demultiplexing of Quantum Correlated Photons Using Silicon-Silica Monolithic Waveguide Platform</span>
+          <span class="res">[<a href="https://ieeexplore.ieee.org/abstract/document/6963832">pdf</a>]</span>
+          <span class="authors">N. Matsuda, P. Karkus, H. Nishi, T. Tsuchizawa, W.J. Munro, H. Takesue, K. Yamada.</span>
+          <span class="venue">European Conference on Optical Communication (ECOC), 2014</span>
         </li>
 
         <li class="paper">
@@ -209,6 +415,24 @@
           <span class="res">[<a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-22-19-22831">pdf</a>]</span>
           <span class="authors">N. Matsuda, P. Karkus, H. Nishi, T. Tsuchizawa, W.J. Munro, H. Takesue, K. Yamada.</span>
           <span class="venue">Optics Express 22(19), 2014</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Designing the Hardware and Software System of a RoboCup Robot Soccer Player</span>
+          <span class="authors">P. Karkus, D. Kiss.</span>
+          <span class="venue">MicroCAD International Scientific Conference G/2 (MicroCAD), 2013</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">The RobonAUT Robot Construction Contest in 2013</span>
+          <span class="authors">T.G. Kiss, L.C. Burkodi, P. Karkus, D. Varga, I. Vajk.</span>
+          <span class="venue">Advances in Control Education (ACE), 2013</span>
+        </li>
+
+        <li class="paper">
+          <span class="title">Team Organization and Participation in the Eurobot 2012 Contest</span>
+          <span class="authors">L.C. Burkodi, T.G. Kiss, P. Karkus, D. Varga, I. Vajk.</span>
+          <span class="venue">Advances in Control Education (ACE), 2013</span>
         </li>
 
       </ul>
